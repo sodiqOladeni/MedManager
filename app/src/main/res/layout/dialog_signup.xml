@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:padding="@dimen/activity_margin">
+
+    <ImageView
+        android:id="@+id/cancel_signup_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/ic_cancel_black_24dp"/>
+
+
+    <!-- Name of drug -->
+    <EditText
+        android:id="@+id/signup_firstname"
+        android:inputType="text"
+        android:hint="@string/hint_first_name"
+        style="@style/EditorFieldStyle" />
+
+    <!-- description of drug -->
+    <EditText
+        android:id="@+id/signup_lastname"
+        android:inputType="text"
+        android:hint="@string/hint_lastname"
+        style="@style/EditorFieldStyle" />
+
+    <!-- Interval of taking of drug -->
+    <EditText
+        android:id="@+id/signup_email"
+        android:inputType="textEmailAddress"
+        android:hint="@string/hint_email"
+        style="@style/EditorFieldStyle" />
+
+    <!-- start date of drug -->
+    <EditText
+        android:id="@+id/signup_password"
+        android:inputType="textPassword"
+        android:hint="@string/hint_password"
+        style="@style/EditorFieldStyle" />
+
+    <!-- end date of drug -->
+    <EditText
+        android:id="@+id/signup_confirm_password"
+        android:inputType="textPassword"
+        android:hint="@string/hint_password_confirm"
+        style="@style/EditorFieldStyle" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/not_ready_for_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_ready"
+            android:textColor="@color/special_black"
+            android:layout_marginEnd="8dp"
+            android:textSize="@dimen/profile_size"/>
+
+        <TextView
+            android:id="@+id/btn_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textColor="@color/special_black"
+            android:layout_marginStart="8dp"
+            android:textSize="@dimen/profile_size"/>
+    </LinearLayout>
+
+
+</LinearLayout>

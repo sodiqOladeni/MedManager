@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:padding="@dimen/activity_margin">
+
+    <ImageView
+        android:id="@+id/cancel_new_med_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/ic_cancel_black_24dp"/>
+
+
+    <!-- Name of drug -->
+    <EditText
+        android:id="@+id/new_drug_name"
+        android:inputType="text"
+        android:hint="@string/drug_name"
+        style="@style/EditorFieldStyle" />
+
+    <!-- description of drug -->
+    <EditText
+        android:id="@+id/new_drug_desc"
+        android:inputType="text"
+        android:hint="@string/drug_desc"
+        style="@style/EditorFieldStyle" />
+
+    <!-- Interval of taking of drug -->
+    <EditText
+        android:id="@+id/new_drug_interval"
+        android:inputType="text"
+        android:clickable="false"
+        android:focusable="false"
+        android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+        android:hint="@string/drug_interval"
+        style="@style/EditorFieldStyle" />
+
+    <!-- start date of drug -->
+    <EditText
+        android:id="@+id/new_drug_start"
+        android:hint="@string/drug_start_date"
+        style="@style/EditorFieldStyle"
+        android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:inputType="date"/>
+
+    <!-- end date of drug -->
+    <EditText
+        android:id="@+id/new_drug_end"
+        android:hint="@string/drug_end_date"
+        android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+        style="@style/EditorFieldStyle"
+        android:clickable="false"
+        android:focusable="false"
+        android:inputType="date"/>
+
+    <LinearLayout
+        android:id="@+id/new_already_taken_drug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/profile_size"
+            android:textColor="@color/special_black"
+            android:text="@string/have_you_taken_the_drug"/>
+
+        <Spinner
+            android:id="@+id/spinner_question"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/profile_size"
+            android:entries="@array/used_drug_before"
+            android:textColor="@color/special_black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/new_drug_in_taken_pieces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/profile_size"
+            android:textColor="@color/special_black"
+            android:text="@string/specify_time"/>
+
+        <Spinner
+            android:id="@+id/spinner_amount"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/profile_size"
+            android:entries="@array/time_used_drug"
+            android:textColor="@color/special_black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/not_ready_medication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_now"
+            android:textColor="@color/special_black"
+            android:layout_marginEnd="8dp"
+            android:textSize="@dimen/profile_size"/>
+
+        <TextView
+            android:id="@+id/add_medication_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_new_med"
+            android:textColor="@color/special_black"
+            android:layout_marginStart="8dp"
+            android:textSize="@dimen/profile_size"/>
+    </LinearLayout>
+
+
+</LinearLayout>

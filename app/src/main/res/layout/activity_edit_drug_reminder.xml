@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="5dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_gravity="end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/special_black"
+            android:text="@string/drug_taken"/>
+
+        <TextView
+            android:id="@+id/edit_drug_time_taken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textSize="20sp"
+            tools:text="5"
+            android:layout_marginStart="10dp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    <!-- Name of drug -->
+    <EditText
+        android:id="@+id/edit_new_drug_name"
+        android:inputType="text"
+        android:hint="@string/drug_name"
+        style="@style/EditorFieldStyle" />
+
+    <!-- description of drug -->
+    <EditText
+        android:id="@+id/edit_new_drug_desc"
+        android:inputType="text"
+        android:hint="@string/drug_desc"
+        style="@style/EditorFieldStyle" />
+
+    <!-- Interval of taking of drug -->
+    <EditText
+        android:id="@+id/edit_new_drug_interval"
+        android:inputType="text"
+        android:clickable="false"
+        android:focusable="false"
+        android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+        android:hint="@string/drug_interval"
+        style="@style/EditorFieldStyle" />
+
+    <!-- start date of drug -->
+    <EditText
+        android:id="@+id/edit_new_drug_start"
+        android:hint="@string/drug_start_date"
+        style="@style/EditorFieldStyle"
+        android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:inputType="date"/>
+
+    <!-- end date of drug -->
+    <EditText
+        android:id="@+id/edit_new_drug_end"
+        android:hint="@string/drug_end_date"
+        android:drawableEnd="@drawable/ic_expand_more_black_24dp"
+        style="@style/EditorFieldStyle"
+        android:clickable="false"
+        android:focusable="false"
+        android:inputType="date"/>
+
+        <TextView
+            android:id="@+id/edit_add_medication_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/drug_taken_text"
+            android:textColor="@color/special_black"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="drugHasBeenTaken"
+            android:layout_gravity="end"
+            android:textSize="@dimen/profile_size"/>
+
+
+</LinearLayout>

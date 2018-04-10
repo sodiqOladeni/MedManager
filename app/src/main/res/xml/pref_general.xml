@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="example_switch"
+        android:textSize="8dp"
+        android:summaryOff="Receive notification for every friend request"
+        android:summaryOn="Disable Notification"
+        android:title="Enable Notification " />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="example_switch"
+        android:summaryOff="Allow device vibration for every notification"
+        android:summaryOn="Disable Vibration"
+        android:title="Enable Vibration"
+        android:textSize="16sp"/>
+
+    <!--<CheckBoxPreference-->
+        <!--android:defaultValue="false"-->
+        <!--android:key="example_switch"-->
+        <!--android:summaryOff="Enable night mode"-->
+        <!--android:summaryOn="Disable night mode"-->
+        <!--android:title="Night Mode"-->
+        <!--android:textSize="@dimen/interaction_size"/>-->
+
+</PreferenceScreen>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/WelcomeTheme"
+    tools:context="com.africanego.med_manager.ui.AppWelcome">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+
+    <TextView
+        android:id="@+id/konector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_med_care"
+        android:textSize="40sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        />
+
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/slogan"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@id/sign_in_button"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/wel_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:paddingStart="23dp"
+            android:fontFamily="@fonts/helveticaneue"
+            android:textColor="@android:color/white"
+            android:background="@drawable/text_border"
+            android:paddingEnd="23dp"
+            android:layout_marginEnd="15dp"
+            android:textSize="@dimen/wel_text_size"
+            android:text="@string/wel_sign_up"
+            android:textAlignment="center"
+            android:onClick="signup"/>
+
+        <Button
+            android:id="@+id/wel_log_in"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/text_border"
+            android:fontFamily="@fonts/helveticaneue"
+            android:paddingEnd="27dp"
+            android:paddingStart="27dp"
+            android:textSize="@dimen/wel_text_size"
+            android:text="@string/wel_log_in"
+            android:textAlignment="center"
+            android:onClick="loginAuth"/>
+    </LinearLayout>
+
+
+    <com.google.android.gms.common.SignInButton
+    android:id="@+id/sign_in_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="75dp"
+    android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.africanego.med_manager">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MedicineList"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ui.AppWelcome"
+            android:screenOrientation="portrait"
+            android:theme="@style/WelcomeTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.UserProfileEdit"
+            android:label="@string/wel_sign_up"
+            android:parentActivityName=".ui.AppWelcome" />
+        <activity
+            android:name=".ui.AppAuthPage"
+            android:label="@string/wel_log_in"
+            android:parentActivityName=".ui.AppWelcome" />
+        <activity
+            android:name=".ui.AppForgotPassword"
+            android:label="Forgot password"
+            android:parentActivityName=".ui.AppAuthPage" />
+        <activity
+            android:name=".ui.AppHelp"
+            android:label="Help"
+            android:parentActivityName=".ui.MedicineList" />
+
+        <activity android:name=".ui.AppAbout" />
+        <activity android:name=".ui.UserProfileChangePassword" />
+        <activity android:name=".ui.SplashScreen" />
+        <activity android:name=".ui.AppSettings"
+            android:parentActivityName=".ui.MedicineList"/>
+        <activity android:name=".ui.CreateAndEditRemainder" />
+
+        <service
+            android:name=".reminder.ReminderAlarmService" android:exported="false" />
+    </application>
+
+</manifest>
