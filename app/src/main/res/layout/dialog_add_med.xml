@@ -81,6 +81,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:textSize="@dimen/profile_size"
+            android:dropDownSelector="@drawable/ic_expand_more_black_24dp"
             android:entries="@array/used_drug_before"
             android:textColor="@color/special_black"/>
     </LinearLayout>
@@ -90,7 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:visibility="gone"
+        android:visibility="visible"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
@@ -104,6 +105,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:textSize="@dimen/profile_size"
+            android:dropDownSelector="@drawable/ic_expand_more_black_24dp"
             android:entries="@array/time_used_drug"
             android:textColor="@color/special_black"/>
     </LinearLayout>

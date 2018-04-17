@@ -42,10 +42,16 @@
             android:parentActivityName=".ui.MedicineList" />
 
         <activity android:name=".ui.AppAbout" />
-        <activity android:name=".ui.UserProfileChangePassword" />
+
+        <activity android:name=".ui.UserProfileChangePassword"
+            android:label="@string/change_password"/>
+
         <activity android:name=".ui.SplashScreen" />
+
         <activity android:name=".ui.AppSettings"
+            android:label="@string/settings"
             android:parentActivityName=".ui.MedicineList"/>
+
         <activity android:name=".ui.CreateAndEditRemainder" />
 
         <service
